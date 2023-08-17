@@ -1,0 +1,27 @@
+apiVersion: install.istio.io/v1alpha1
+kind: IstioOperator
+metadata:
+  namespace: istio-system
+spec:
+  profile: default
+  values:
+    global:
+      meshID: usmesh
+      multiCluster:
+        clusterName: cluster1
+      network: cluster1-network
+  components:
+    egressGateways:
+    - name: istio-egressgateway
+      enabled: true
+    ingressGateways:
+    - name: istio-ingressgateway
+      enabled: true
+      label:
+        istio: ingressgateway
+    - name: istio-eastwestgateway
+      enabled: true
+      label:
+        istio: eastwestgateway
+        app: istio-eastwestgateway
+        topology.istio.io/network: cluster1-network
