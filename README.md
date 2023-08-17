@@ -147,12 +147,13 @@ kubectl exec -n sleep -c sleep \
 ```
 
 **output:**
+```
 Hello version: v1, instance: helloworld-v1-b6c45f55-mdsnx
 Hello version: v1, instance: helloworld-v1-b6c45f55-mdsnx
 Hello version: v1, instance: helloworld-v1-b6c45f55-mdsnx
 Hello version: v1, instance: helloworld-v1-b6c45f55-mdsnx
 Hello version: v1, instance: helloworld-v1-b6c45f55-mdsnx
-
+```
 
 8. Create a Gateway and a Virtual Service for hello world on Cluster2
 
@@ -185,10 +186,11 @@ kubectl exec -n sleep -c sleep \
 ```
 
 **Output:**
+```
 Hello version: v2, instance: helloworld-v2-79d5467d55-ptwkp
 Hello version: v2, instance: helloworld-v2-79d5467d55-ptwkp
 Hello version: v2, instance: helloworld-v2-79d5467d55-ptwkp
-
+```
 
 This concludes end of the demo and ensures Istio Multi-cluster is working on EKS in us-west-2 region.
 
